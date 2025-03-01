@@ -24,16 +24,16 @@ class _ProfilePageState extends State<ProfilePage> {
                 style: TextStyle(fontSize: 30),
               ),
             ),
-            Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+            const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         'User Profile',
                         style: TextStyle(fontSize: 45),
                       ),
-                      const Text('Name'),
+                      Text('Name'),
                       TextField(
                         decoration: InputDecoration(
                           filled: true,
@@ -163,8 +163,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     ])),
             ElevatedButton(
                 onPressed: () {},
-                style: ElevatedButton.styleFrom(minimumSize: Size(450, 50)),
-                child: Text('Create Account'))
+                style:
+                    ElevatedButton.styleFrom(minimumSize: const Size(450, 50)),
+                child: const Text('Create Account'))
           ],
         ),
       ),
