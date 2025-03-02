@@ -1,4 +1,5 @@
-import 'package:college_connect_user/profile_page.dart';
+import 'package:college_connect_user/features/login/user_login.dart';
+import 'package:college_connect_user/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,12 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'user_login',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const ProfilePage(),
+      theme: appTheme,
+      home: SignInScreen(),
     );
   }
 }
