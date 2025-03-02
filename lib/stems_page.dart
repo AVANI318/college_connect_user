@@ -11,59 +11,59 @@ class _StemsPageState extends State<StemsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF9A96E4),
+      backgroundColor: const Color(0xFF9A96E4),
       body: Column(
         children: [
           Column(children: [
             Container(
               height: 80,
               width: 700,
-              color: Color(0xFF2A275F),
-              child: Text(
+              color: const Color(0xFF2A275F),
+              child: const Text(
                 "COLLEGE CONNECT",
                 style: TextStyle(fontSize: 30),
               ),
             ),
-            Text('welcome to stems',
+            const Text('welcome to stems',
                 style: TextStyle(fontSize: 30), textAlign: TextAlign.center),
-            Text(
+            const Text(
               'stems id',
               style: TextStyle(
-                color: const Color.fromARGB(255, 246, 244, 244),
+                color: Color.fromARGB(255, 246, 244, 244),
                 fontSize: 20.0,
               ),
               textAlign: TextAlign.left,
             ),
-            SizedBox(
+            const SizedBox(
               height: 200,
             ),
-            TextField(
+            const TextField(
                 decoration: InputDecoration(
                     hintText: "enter college id",
                     border:
                         (OutlineInputBorder(borderRadius: BorderRadius.zero)))),
           ]),
-          Text(
+          const Text(
             'password',
             style: TextStyle(
-              color: const Color.fromARGB(255, 246, 244, 244),
+              color: Color.fromARGB(255, 246, 244, 244),
               fontSize: 20.0,
             ),
             textAlign: TextAlign.left,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          TextField(
+          const TextField(
               decoration: InputDecoration(
                   hintText: "enter password",
                   border:
                       (OutlineInputBorder(borderRadius: BorderRadius.zero)))),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           ElevatedButton(
-            child: Text('Login'),
+            child: const Text('Login'),
             onPressed: () {},
           )
         ],

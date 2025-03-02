@@ -2,11 +2,11 @@ import 'package:college_connect_user/profile_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const user_login());
+  runApp(const MyApp());
 }
 
-class user_login extends StatelessWidget {
-  const user_login({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
