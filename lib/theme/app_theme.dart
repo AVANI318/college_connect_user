@@ -12,10 +12,10 @@ const Color cardFocusBorderColor = Color.fromARGB(255, 203, 203, 203);
 const Color iconColor = Color(0xFF515866);
 // Primary color (Blue): Used for key interactive elements like buttons, links, and selected states
 const Color primaryColor = Colors.purple;
-const Color secondaryColor = Color(0xFFF1F3F4);
+const Color secondaryColor = Colors.white;
 
 // Tertiary color (Gray): Used for less important UI elements like disabled states or subtle details
-const tertiaryColor = Color(0xFFF0F0F0);
+const tertiaryColor = Color(0xFFffffff);
 
 // Accent color (Yellow): Used to highlight important information like warnings, success messages, or interactive elements
 const accentColor = Color(0xFFFFD700);
@@ -99,43 +99,37 @@ ThemeData appTheme = ThemeData(
     prefixIconColor: iconColor,
     floatingLabelBehavior: FloatingLabelBehavior.auto,
     contentPadding: const EdgeInsets.symmetric(
-      horizontal: 18,
-      vertical: 15,
+      horizontal: 15,
+      vertical: 12,
     ),
-    fillColor: cardBackgroundColor.withAlpha(100),
+    fillColor: Colors.white.withAlpha(100),
     filled: true,
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(10),
       borderSide: const BorderSide(
         color: cardBorderColor,
       ),
     ),
     enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(10),
       borderSide: const BorderSide(
         color: cardBorderColor,
       ),
     ),
     focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(10),
       borderSide: const BorderSide(
         color: cardFocusBorderColor,
       ),
     ),
     focusedErrorBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(10),
       borderSide: BorderSide(
         color: Colors.red[700]!,
       ),
     ),
-    errorBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(
-        color: cardBorderColor,
-      ),
-    ),
     disabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(32),
+      borderRadius: BorderRadius.circular(15),
       borderSide: const BorderSide(
         color: cardBorderColor,
       ),

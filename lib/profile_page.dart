@@ -2,6 +2,11 @@ import 'package:college_connect_user/common_widgets.dart/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+import 'common_widgets.dart/custom_alert_dialog.dart';
+import 'features/login/loginscreen.dart';
+
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
@@ -43,7 +48,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 radius: 60,
                 backgroundColor: Colors.black.withAlpha(100),
                 backgroundImage: NetworkImage(
-                    'https://www.example.com/user_profile_image.jpg'),
+                    'https://images.unsplash.com/photo-1569413013126-5f9f76c55499?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
                 child: Icon(
                   Icons.person,
                   size: 60,
@@ -68,7 +73,28 @@ class _ProfilePageState extends State<ProfilePage> {
               ]),
               const SizedBox(height: 30),
               CustomButton(
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => CustomAlertDialog(
+                      title: "LOG OUT",
+                      content: const Text(
+                        "Are you sure you want to log out? Clicking 'Logout' will end your current session and require you to sign in again to access your account.",
+                      ),
+                      width: 400,
+                      primaryButton: "LOG OUT",
+                      onPrimaryPressed: () {
+                        Supabase.instance.client.auth.signOut();
+                        Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Loginscreen(),
+                            ),
+                            (route) => false);
+                      },
+                    ),
+                  );
+                },
                 label: 'Log Out',
               ),
             ],

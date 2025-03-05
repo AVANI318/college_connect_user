@@ -1,7 +1,6 @@
+import 'package:college_connect_user/features/login/loginscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-
-import '../features/login/user_login.dart';
 
 void checkLogin(BuildContext context) {
   Future.delayed(
@@ -9,11 +8,10 @@ void checkLogin(BuildContext context) {
         milliseconds: 100,
       ), () {
     User? currentUser = Supabase.instance.client.auth.currentUser;
-    if (!(currentUser != null &&
-        currentUser.appMetadata['role'] == 'architect')) {
+    if (!(currentUser != null)) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => const SignInScreen(),
+          builder: (context) => const Loginscreen(),
         ),
       );
     }
